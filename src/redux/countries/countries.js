@@ -1,0 +1,38 @@
+import { breakDown, getVirus } from "../../helpers.js/fetchCountries";
+
+const GET_COUNTRIES = 'covidFigures/countries/GET_COUNTRIES';
+
+const initialState = []
+
+export const getCountries = () => async (dispatch) => {
+  let date = new Date()
+  let toLocale = date.toLocaleDateString()
+  const newArr = toLocale.split('/')
+  let nextDate = []
+  nextDate[0] = newArr[2]
+  nextDate[1] = newArr[0]
+  nextDate[2] = newArr[1]
+  const latestDate = nextDate.join('-')
+
+  const data = await getVirus(latestDate)
+  const newData = breakDown(data, latestDate)
+  dispatch({
+    type: GET_COUNTRIES,
+    newData
+  })
+}
+
+const reducer = (state = initialState, action) => {
+  switch(action.type) {
+    case GET_COUNTRIES:
+      console.log('Hahaha')
+      return [
+        action.newData,
+        ...state
+      ]
+    default:
+      return state
+  }
+}
+
+export default reducer

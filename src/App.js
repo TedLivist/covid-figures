@@ -1,17 +1,19 @@
+import { Provider } from 'react-redux';
 import { Switch, Route } from 'react-router-dom';
 
 import './App.css';
-import List from './components/List';
+import Countries from './components/Countries';
 import Details from './components/Details';
+import store from './redux/configureStore';
 
 function App() {
   return (
-    <div>
+    <Provider store={store}>
       <Switch>
-        <Route path="/" component={List} exact />
-        <Route path="/details" component={Details} />
+        <Route path="/" component={Countries} exact />
+        <Route path="/:id" component={Details} />
       </Switch>
-    </div>
+    </Provider>
   );
 }
 
