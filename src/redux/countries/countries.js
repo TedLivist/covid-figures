@@ -1,4 +1,4 @@
-import { breakDown, getVirus } from "../../helpers.js/fetchCountries";
+import { resolveCountries, fetchCountries } from "../../helpers.js/fetchCountries";
 
 const GET_COUNTRIES = 'covidFigures/countries/GET_COUNTRIES';
 
@@ -11,11 +11,11 @@ export const getCountries = () => async (dispatch) => {
   let nextDate = []
   nextDate[0] = newArr[2]
   nextDate[1] = newArr[0]
-  nextDate[2] = newArr[1]
+  nextDate[2] = newArr[1] - 1
   const latestDate = nextDate.join('-')
 
-  const data = await getVirus(latestDate)
-  const countries = breakDown(data, latestDate)
+  const data = await fetchCountries(latestDate)
+  const countries = resolveCountries(data, latestDate)
   dispatch({
     type: GET_COUNTRIES,
     countries

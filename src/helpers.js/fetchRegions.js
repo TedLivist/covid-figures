@@ -5,5 +5,11 @@ export const fetchRegions = async (date, id) => {
 
 export const resolveRegions = (response, date) => {
   const key = Object.keys(response.dates[date].countries)
-  return response.dates[date].countries[key].regions
+  const initialRegions = response.dates[date].countries[key].regions
+  console.log(initialRegions)
+  const regions = initialRegions.map((region) => {
+    return {id: region.id, name: region.name, totalCases: region.today_confirmed}
+  })
+
+  return { regions, name: key }
 }
