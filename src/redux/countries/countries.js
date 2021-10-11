@@ -25,7 +25,6 @@ export const getCountries = () => async (dispatch) => {
 const reducer = (state = initialState, action) => {
   switch(action.type) {
     case GET_COUNTRIES:
-      console.log('Hahaha')
       return {
         countries: action.countries,
         ...state

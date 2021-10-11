@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import './App.css';
 import Countries from './components/Countries';
-import Details from './components/Details';
+import Regions from './components/Regions';
 import store from './redux/configureStore';
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
     <Provider store={store}>
       <Switch>
         <Route path="/" component={Countries} exact />
-        <Route path="/:id" component={Details} />
+        <Route path="/:id" component={Regions} />
       </Switch>
     </Provider>
   );
