@@ -13,8 +13,8 @@ export const resolveCountries = (response, date) => {
     for (let item of cont) {
       if (item === country) {
         const id = value.id
-        const totalDeaths = value.today_deaths
-        mainArr.push({id, country, totalDeaths})
+        const confirmedCases = value.today_confirmed
+        mainArr.push({id, country, confirmedCases})
       }
     }
   })

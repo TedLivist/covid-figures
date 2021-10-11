@@ -17,12 +17,16 @@ const Regions = () => {
     return null
   }
 
+  let num = 0
+
   return (
     <div>
       <p>{id} Regions</p>
       <p>{name}</p>
       <div>
         {regions.map((region) => {
+          num += region.totalCases
+          console.log(num)
           return <OneRegion key={region.id} name={region.name} cases={region.totalCases} />
         })}
       </div>

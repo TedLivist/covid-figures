@@ -19,7 +19,7 @@ const Countries = () => {
     <div>
       <p>Haha Countries</p>
       {countriesList.map((country) => (
-        <OneCountry key={country.id} id={country.id} name={country.country} deaths={country.totalDeaths} />
+        <OneCountry key={country.id} id={country.id} name={country.country} deaths={country.confirmedCases} />
       ))}
     </div>
   );
