@@ -12,8 +12,10 @@ export const breakDown = (someData, date) => {
   obj.map(([country, value]) => {
     for (let item of cont) {
       if (item === country) {
-        const confirmedCases = value.today_confirmed
-        mainArr.push({country, confirmedCases})
+        console.log(value)
+        const id = value.id
+        const totalDeaths = value.today_deaths
+        mainArr.push({id, country, totalDeaths})
       }
     }
   })

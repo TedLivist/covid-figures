@@ -15,10 +15,10 @@ export const getCountries = () => async (dispatch) => {
   const latestDate = nextDate.join('-')
 
   const data = await getVirus(latestDate)
-  const newData = breakDown(data, latestDate)
+  const countries = breakDown(data, latestDate)
   dispatch({
     type: GET_COUNTRIES,
-    newData
+    countries
   })
 }
 
@@ -26,10 +26,10 @@ const reducer = (state = initialState, action) => {
   switch(action.type) {
     case GET_COUNTRIES:
       console.log('Hahaha')
-      return [
-        action.newData,
+      return {
+        countries: action.countries,
         ...state
-      ]
+      }
     default:
       return state
   }
