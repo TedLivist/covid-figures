@@ -2,7 +2,9 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { getRegions } from '../redux/regions/regions';
-import Jumbo from './Jumbo';
+import Header from './common/Header';
+import Jumbo from './common/Jumbo';
+import Topic from './common/Topic';
 import OneRegion from './OneRegion';
 
 const Regions = () => {
@@ -20,7 +22,9 @@ const Regions = () => {
 
   return (
     <div>
+      <Header title={'cases by region'} />
       <Jumbo name={name} cases={totalCases} />
+      <Topic topic={'CASES BY REGION - 2021'} />
       <p>{name}</p>
       <p>{totalCases}</p>
       <div>

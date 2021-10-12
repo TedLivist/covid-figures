@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCountries } from '../redux/countries/countries';
-import Jumbo from './Jumbo';
+import Header from './common/Header';
+import Jumbo from './common/Jumbo';
+import Topic from './common/Topic';
 import OneCountry from './OneCountry';
 
 const Countries = () => {
@@ -18,8 +20,9 @@ const Countries = () => {
 
   return (
     <div>
-      <p>Haha Countries</p>
+      <Header year={'2021'} title={'countries cases'} />
       <Jumbo name={'Countries'} cases={countriesTotal} />
+      <Topic topic={'CASES BY COUNTRY'} />
       {countries.map((country) => (
         <OneCountry key={country.id} id={country.id} name={country.country} deaths={country.confirmedCases} />
       ))}
