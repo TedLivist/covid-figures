@@ -3,3 +3,30 @@
   justify-content: space-between;
 }
 
+.jumbo {
+  justify-content: space-between;
+  background-color: #FC5193;
+  align-items: center;
+}
+
+.jumbo-title {
+  text-align: right;
+  padding: 5rem 0.9rem 5rem 0;
+}
+
+.jumbo-title div {
+  color: #fff;
+  font-weight: bold;
+}
+
+.jumbo-title div:first-child {
+  font-size: 1.5rem;
+}
+
+.jumbo-title div:nth-child(2) {
+  font-size: 1rem;
+}
+
+.icon-div {
+  text-align: center;
+}
