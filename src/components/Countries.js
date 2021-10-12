@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCountries } from '../redux/countries/countries';
 import Header from './common/Header';
@@ -13,9 +13,26 @@ const Countries = () => {
   }, [dispatch])
 
   const { countries, countriesTotal } = useSelector((state) => state.countriesReducer)
+  const [countryState, setCountryState] = useState(countries)
+  const [countryName, setCountryName] = useState('')
+  useEffect(() => {
+    setCountryState(countries)
+  }, [countries])
 
-  if (!countries) {
-    return null
+  console.log(countryState)
+  const onChange = (e) => {
+    let value = e.target.value
+    let finalValue = ''
+    if (value.length > 0) {
+      finalValue = `${value[0].toUpperCase()}` + `${value.slice(1, value.length)}`
+      setCountryName(finalValue)
+      const newList = countries.filter((country) => country.country.includes(finalValue))
+      setCountryState(newList)
+    } else {
+      finalValue = ''
+      setCountryName(finalValue)
+      setCountryState(countries)
+    }
   }
 
   let num = 0
@@ -27,11 +44,11 @@ const Countries = () => {
       <div className="topic-input d-flex">
         <Topic topic={'CASES BY COUNTRY'} />
         <div className="search-input pe-3">
-          <input type="text" placeholder="Search movie" />
+          <input type="text" placeholder="Search movie" onChange={onChange} value={countryName} />
         </div>
       </div>
       <div className="countries-container">
-        {countries.map((country) => (
+        {countryState && countryState.map((country) => (
           <OneCountry num={num + 1 > 4 ? num = 1 : num += 1} key={country.id} id={country.id} name={country.country} deaths={country.confirmedCases} />
         ))}
       </div>
