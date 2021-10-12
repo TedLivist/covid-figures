@@ -11,22 +11,19 @@ const Regions = () => {
     dispatch(getRegions(id))
   }, [dispatch, id])
   
-  const { regions, name } = useSelector((state) => state.regionsReducer)
+  const { regions, name, totalCases } = useSelector((state) => state.regionsReducer)
 
   if (!regions) {
     return null
   }
 
-  let num = 0
-
   return (
     <div>
       <p>{id} Regions</p>
       <p>{name}</p>
+      <p>{totalCases}</p>
       <div>
         {regions.map((region) => {
-          num += region.totalCases
-          console.log(num)
           return <OneRegion key={region.id} name={region.name} cases={region.totalCases} />
         })}
       </div>

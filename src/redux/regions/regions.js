@@ -15,11 +15,12 @@ export const getRegions = (payload) => async (dispatch) => {
   const latestDate = nextDate.join('-')
   
   const data = await fetchRegions(latestDate, payload)
-  const { regions, name } = resolveRegions(data, latestDate)
+  const { regions, name, totalCases } = resolveRegions(data, latestDate)
   dispatch({
     type: GET_REGIONS,
     regions,
-    name
+    name,
+    totalCases,
   })
 }
 
@@ -29,7 +30,8 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         regions: action.regions,
-        name: action.name
+        name: action.name,
+        totalCases: action.totalCases
       }
     default:
       return state
