@@ -8,18 +8,20 @@ import OneCountry from './OneCountry';
 
 const Countries = () => {
   const dispatch = useDispatch()
+  
   useEffect(() => {
     dispatch(getCountries())
   }, [dispatch])
 
+  let num = 0
   const { countries, countriesTotal } = useSelector((state) => state.countriesReducer)
   const [countryState, setCountryState] = useState(countries)
   const [countryName, setCountryName] = useState('')
+
   useEffect(() => {
     setCountryState(countries)
   }, [countries])
 
-  console.log(countryState)
   const onChange = (e) => {
     let value = e.target.value
     let finalValue = ''
@@ -34,8 +36,6 @@ const Countries = () => {
       setCountryState(countries)
     }
   }
-
-  let num = 0
 
   return (
     <div>

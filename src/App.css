@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #EA4B89;
+  background-color: rgba(#EA4B89, 0, 0, 0.1)
+}
+
 .header {
   background-color: #EF4C8B;
   justify-content: space-between;
