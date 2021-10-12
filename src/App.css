@@ -30,3 +30,12 @@
 .icon-div {
   text-align: center;
 }
+
+.topic-div {
+  background-color: #DF3F7E;
+  font-size: 0.75rem;
+  padding-left: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  font-family: sans-serif;
+}
