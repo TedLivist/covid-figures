@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="one-region d-flex region-odd"
+>
+  <div />
+  <div
+    className="d-flex"
+  >
+    <div />
+    <div
+      className="bx-icon-2"
+    >
+      <box-icon
+        color="#fff"
+        name="right-arrow-circle"
+        size="1rem"
+      />
+    </div>
+  </div>
+</div>
+`;
