@@ -20,18 +20,20 @@ const Regions = () => {
     return null
   }
 
+  let num = 0
+
   return (
     <div>
       <Header title={'cases by region'} />
       <Jumbo name={name} cases={totalCases} />
       <Topic topic={'CASES BY REGION - 2021'} />
-      <p>{name}</p>
-      <p>{totalCases}</p>
-      <div>
-        {regions.map((region) => {
-          return <OneRegion key={region.id} name={region.name} cases={region.totalCases} />
-        })}
-      </div>
+      <ul>
+        {regions.map((region) => (
+          <li>
+            <OneRegion key={region.id} num={num += 1} name={region.name} cases={region.totalCases} />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

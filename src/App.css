@@ -1,6 +1,7 @@
 .header {
   background-color: #EF4C8B;
   justify-content: space-between;
+  position: sticky;
 }
 
 .jumbo {
@@ -38,4 +39,31 @@
   font-weight: 700;
   color: #fff;
   font-family: sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  padding: 0;
+}
+
+.one-region {
+  justify-content: space-between;
+  padding: 1.5rem 0.98rem;
+  color: #fff;
+}
+
+.bx-icon-2 {
+  padding-top: 0.15rem;
+  margin-left: 0.5rem;
+}
+
+.region-odd {
+  background-color: #EA4B89;
+}
+
+.region-even {
+  background-color: #CF4278;
 }

@@ -6,7 +6,7 @@ const Topic = (props) => {
   
   return (
     <div className="topic-div">
-      <p>{topic}</p>
+      <div>{topic}</div>
     </div>
   );
 }

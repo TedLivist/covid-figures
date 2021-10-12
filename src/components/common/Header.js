@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Header = (props) => {
   const { year, title } = props
   return (
-    <div className="d-flex header px-2 py-2">
+    <div className="d-flex fixed-top header px-2 py-2">
       <div className="d-flex">
         <Link to="/">
         <box-icon color="white" type='solid' name='chevron-left'></box-icon>
