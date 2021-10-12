@@ -24,7 +24,12 @@ const Countries = () => {
     <div>
       <Header year={'2021'} title={'countries cases'} />
       <Jumbo name={'Countries'} cases={countriesTotal} />
-      <Topic topic={'CASES BY COUNTRY'} />
+      <div className="topic-input d-flex">
+        <Topic topic={'CASES BY COUNTRY'} />
+        <div className="search-input pe-3">
+          <input type="text" placeholder="Search movie" />
+        </div>
+      </div>
       <div className="countries-container">
         {countries.map((country) => (
           <OneCountry num={num + 1 > 4 ? num = 1 : num += 1} key={country.id} id={country.id} name={country.country} deaths={country.confirmedCases} />

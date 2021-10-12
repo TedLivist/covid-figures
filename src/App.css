@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .header {
   background-color: #EF4C8B;
   justify-content: space-between;
@@ -109,3 +113,19 @@ ul {
   font-size: 1.2rem;
 }
 
+.topic-input {
+  justify-content: space-between;
+  background-color: #DF3F7E;
+}
+
+.search-input input {
+  height: 1.5rem;
+  width: 8rem;
+  border: 1px solid #DF3F7E;
+  border-radius: 3px;
+  padding: 0.5rem;
+}
+
+.search-input input:focus {
+  outline: 0;
+}
