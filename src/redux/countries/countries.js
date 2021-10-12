@@ -15,10 +15,11 @@ export const getCountries = () => async (dispatch) => {
   const latestDate = nextDate.join('-')
 
   const data = await fetchCountries(latestDate)
-  const countries = resolveCountries(data, latestDate)
+  const { mainArr, num } = resolveCountries(data, latestDate)
   dispatch({
     type: GET_COUNTRIES,
-    countries
+    countries: mainArr,
+    num
   })
 }
 
@@ -26,6 +27,7 @@ const reducer = (state = initialState, action) => {
   switch(action.type) {
     case GET_COUNTRIES:
       return {
+        countriesTotal: action.num,
         countries: action.countries,
         ...state
       }

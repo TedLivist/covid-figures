@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCountries } from '../redux/countries/countries';
+import Jumbo from './Jumbo';
 import OneCountry from './OneCountry';
 
 const Countries = () => {
@@ -9,16 +10,17 @@ const Countries = () => {
     dispatch(getCountries())
   }, [dispatch])
 
-  const countriesList = useSelector((state) => state.countriesReducer.countries)
+  const { countries, countriesTotal } = useSelector((state) => state.countriesReducer)
 
-  if (!countriesList) {
+  if (!countries) {
     return null
   }
 
   return (
     <div>
       <p>Haha Countries</p>
-      {countriesList.map((country) => (
+      <Jumbo name={'Countries'} cases={countriesTotal} />
+      {countries.map((country) => (
         <OneCountry key={country.id} id={country.id} name={country.country} deaths={country.confirmedCases} />
       ))}
     </div>

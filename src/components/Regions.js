@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { getRegions } from '../redux/regions/regions';
+import Jumbo from './Jumbo';
 import OneRegion from './OneRegion';
 
 const Regions = () => {
@@ -19,7 +20,7 @@ const Regions = () => {
 
   return (
     <div>
-      <p>{id} Regions</p>
+      <Jumbo name={name} cases={totalCases} />
       <p>{name}</p>
       <p>{totalCases}</p>
       <div>

@@ -1,8 +1,14 @@
 import React from 'react';
 
-const Jumbo = () => {
+const Jumbo = (props) => {
+  const { name, cases } = props
+  
   return (
-    <div>Jumbo</div>
+    <div>
+      <p>Jumbo</p>
+      <p>{name}</p>
+      <p>{cases}</p>
+    </div>
   );
 }
  
