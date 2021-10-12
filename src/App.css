@@ -67,3 +67,45 @@ ul {
 .region-even {
   background-color: #CF4278;
 }
+
+.countries-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.tinted-bg {
+  background-color: #CF4479;
+}
+
+.lighter-bg {
+  background-color: #DC4782;
+}
+
+
+.country-div a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+.country-bx {
+  text-align: center;
+}
+
+.country-text {
+  text-align: right;
+}
+
+.country-arrow {
+  padding: 0;
+  float: right;
+}
+
+.country-sub-cases {
+  font-size: 0.8rem;
+}
+
+.country-name {
+  font-size: 1.2rem;
+}
+

@@ -18,14 +18,18 @@ const Countries = () => {
     return null
   }
 
+  let num = 0
+
   return (
     <div>
       <Header year={'2021'} title={'countries cases'} />
       <Jumbo name={'Countries'} cases={countriesTotal} />
       <Topic topic={'CASES BY COUNTRY'} />
-      {countries.map((country) => (
-        <OneCountry key={country.id} id={country.id} name={country.country} deaths={country.confirmedCases} />
-      ))}
+      <div className="countries-container">
+        {countries.map((country) => (
+          <OneCountry num={num + 1 > 4 ? num = 1 : num += 1} key={country.id} id={country.id} name={country.country} deaths={country.confirmedCases} />
+        ))}
+      </div>
     </div>
   );
 }

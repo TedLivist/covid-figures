@@ -3,13 +3,21 @@ import { NavLink } from 'react-router-dom';
 
 const OneCountry = (props) => {
 
-  const { id, name, deaths } = props
+  const { num, id, name, deaths } = props
 
   return (
-    <div>
+    <div className={num == 2 || num == 3 ? "country-div pb-3 tinted-bg" : "country-div pb-3 lighter-bg"}>
       <NavLink to={`/${id}`}>
-        <div>name: {name}</div>
-        <div>cases: {deaths}</div>
+        <span className="country-arrow">
+          <box-icon color="#fff" size="1rem" name='right-arrow-circle'></box-icon>
+        </span>
+        <div className="country-bx">
+          <box-icon color="#7B2C4B" size="6rem" name='world'></box-icon>
+        </div>
+        <div className="country-text me-2">
+          <div className="country-name">{name}</div>
+          <div className="country-sub-cases">{deaths}</div>
+        </div>
       </NavLink>
     </div>
   );
