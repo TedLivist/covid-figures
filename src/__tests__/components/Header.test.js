@@ -1,14 +1,14 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
-import OneCountry from '../components/OneCountry';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Header from '../../components/common/Header';
 
 test('renders correctly', () => {
   const tree = renderer
     .create(
-    <BrowserRouter>
-      <OneCountry />
-    </BrowserRouter>
+      <Router>
+        <Header />
+      </Router>
     )
     .toJSON()
   expect(tree).toMatchSnapshot()

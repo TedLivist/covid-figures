@@ -1,21 +1,14 @@
 import { resolveCountries, fetchCountries } from "../../helpers.js/fetchCountries";
+import { formatDate } from "../../helpers.js/formatDate";
 
 const GET_COUNTRIES = 'covidFigures/countries/GET_COUNTRIES';
 
 const initialState = []
 
 export const getCountries = () => async (dispatch) => {
-  let date = new Date()
-  let toLocale = date.toLocaleDateString()
-  const newArr = toLocale.split('/')
-  let nextDate = []
-  nextDate[0] = newArr[2]
-  nextDate[1] = newArr[0]
-  nextDate[2] = newArr[1] - 1
-  const latestDate = nextDate.join('-')
-
-  const data = await fetchCountries(latestDate)
-  const { mainArr, num } = resolveCountries(data, latestDate)
+  const date = formatDate()
+  const data = await fetchCountries(date)
+  const { mainArr, num } = resolveCountries(data, date)
   dispatch({
     type: GET_COUNTRIES,
     countries: mainArr,

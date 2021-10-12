@@ -1,10 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import OneRegion from '../components/OneRegion';
+import Topic from '../../components/common/Topic';
 
-test('renders correctly', () => {
+it ('renders correctly', () => {
   const tree = renderer
-    .create(<OneRegion />)
+    .create(<Topic />)
     .toJSON()
   expect(tree).toMatchSnapshot()
 })
