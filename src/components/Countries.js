@@ -45,7 +45,7 @@ const Countries = () => {
       <div className="topic-input d-flex">
         <Topic topic="CASES BY COUNTRY" />
         <div className="search-input pe-3">
-          <input type="text" placeholder="Search movie" onChange={onChange} value={countryName} />
+          <input type="text" placeholder="Search country" onChange={onChange} value={countryName} />
         </div>
       </div>
       <div className="countries-container">
