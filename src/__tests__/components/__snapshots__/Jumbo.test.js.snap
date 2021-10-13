@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="jumbo d-flex"
+>
+  <div
+    className="icon-div w-50"
+  >
+    <box-icon
+      color="#7B2C4B"
+      name="map"
+      size="8rem"
+    />
+  </div>
+  <div
+    className="w-50 jumbo-title"
+  >
+    <div>
+      
+    </div>
+    <div>
+      0
+    </div>
+  </div>
+</div>
+`;
