@@ -44,6 +44,5 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
+- The design for this project was inspired by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio). The design can be found [here](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
 - Inspiration
-- etc

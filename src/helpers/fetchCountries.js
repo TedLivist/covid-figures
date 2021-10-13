@@ -19,6 +19,9 @@ const cont = [
   'India',
   'Mexico',
   'US',
+  'Colombia',
+  'Australia',
+  'Argentina',
   'Denmark',
 ];
 
