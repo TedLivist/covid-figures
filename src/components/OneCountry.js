@@ -17,7 +17,7 @@ const OneCountry = (props) => {
           <box-icon color="#fff" size="1rem" name="right-arrow-circle" />
         </span>
         <div className="country-bx">
-          <box-icon color="#7B2C4B" size="6rem" name="world" />
+          <box-icon color="#7B2C4B" size="6rem" name="map" />
         </div>
         <div className="country-text me-2">
           <div className="country-name">{name}</div>

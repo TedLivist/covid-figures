@@ -7,7 +7,9 @@ const Jumbo = (props) => {
   return (
     <div className="jumbo d-flex">
       <div className="icon-div w-50">
-        <box-icon color="#7B2C4B" size="8rem" name="world" />
+        {name === 'Countries'
+          ? <box-icon color="#7B2C4B" size="8rem" name="world" />
+          : <box-icon color="#7B2C4B" size="8rem" name="map" />}
       </div>
       <div className="w-50 jumbo-title">
         <div>{name}</div>

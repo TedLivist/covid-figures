@@ -21,7 +21,6 @@ const cont = [
   'US',
   'Colombia',
   'Australia',
-  'Argentina',
   'Denmark',
 ];
 
