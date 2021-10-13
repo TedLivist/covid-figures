@@ -8,34 +8,42 @@ import Topic from './common/Topic';
 import OneRegion from './OneRegion';
 
 const Regions = () => {
-  const dispatch = useDispatch()
-  const { id } = useParams()
-  let num = 0
+  const dispatch = useDispatch();
+  const { id } = useParams();
+  let num = 0;
 
   useEffect(() => {
-    dispatch(getRegions(id))
-  }, [dispatch, id])
+    dispatch(getRegions(id));
+  }, [dispatch, id]);
 
-  const { regions, name, totalCases } = useSelector((state) => state.regionsReducer)
+  const { regions, name, totalCases } = useSelector((state) => state.regionsReducer);
 
   if (!regions) {
-    return null
+    return null;
   }
 
   return (
     <div>
-      <Header title={'cases by region'} />
-      <Jumbo name={name} cases={totalCases} />
-      <Topic topic={'CASES BY REGION - 2021'} />
+      <Header title="cases by region" />
+      <Jumbo name={name[0]} cases={totalCases} />
+      <Topic topic="CASES BY REGION - 2021" />
       <ul>
-        {regions.map((region) => (
-          <li key={region.id}>
-            <OneRegion num={num += 1} name={region.name} cases={region.totalCases} />
-          </li>
-        ))}
+        {regions && regions.map((region) => {
+          num += 1;
+
+          return (
+            <li key={region.id}>
+              <OneRegion
+                num={num}
+                name={region.name}
+                cases={region.totalCases}
+              />
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
-}
- 
+};
+
 export default Regions;

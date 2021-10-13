@@ -1,32 +1,32 @@
-import { resolveCountries, fetchCountries } from "../../helpers/fetchCountries";
-import formatDate from "../../helpers/formatDate";
+import { resolveCountries, fetchCountries } from '../../helpers/fetchCountries';
+import formatDate from '../../helpers/formatDate';
 
 const GET_COUNTRIES = 'covidFigures/countries/GET_COUNTRIES';
 
-const initialState = []
+const initialState = [];
 
 export const getCountries = () => async (dispatch) => {
-  const date = formatDate()
-  const data = await fetchCountries(date)
-  const { mainArr, num } = resolveCountries(data, date)
+  const date = formatDate();
+  const data = await fetchCountries(date);
+  const { mainArr, num } = resolveCountries(data, date);
   dispatch({
     type: GET_COUNTRIES,
     countries: mainArr,
-    num
-  })
-}
+    num,
+  });
+};
 
 const reducer = (state = initialState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case GET_COUNTRIES:
       return {
         countriesTotal: action.num,
         countries: action.countries,
-        ...state
-      }
+        ...state,
+      };
     default:
-      return state
+      return state;
   }
-}
+};
 
-export default reducer
+export default reducer;

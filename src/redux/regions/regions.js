@@ -1,35 +1,35 @@
-import { fetchRegions, resolveRegions } from "../../helpers/fetchRegions";
-import formatDate from "../../helpers/formatDate";
+import { fetchRegions, resolveRegions } from '../../helpers/fetchRegions';
+import formatDate from '../../helpers/formatDate';
 
 const GET_REGIONS = 'covidFigures/countries/GET_REGIONS';
 
-const initialState = []
+const initialState = [];
 
 export const getRegions = (payload) => async (dispatch) => {
-  const date = formatDate()
+  const date = formatDate();
 
-  const data = await fetchRegions(date, payload)
-  const { regions, name, totalCases } = resolveRegions(data, date)
+  const data = await fetchRegions(date, payload);
+  const { regions, name, totalCases } = resolveRegions(data, date);
   dispatch({
     type: GET_REGIONS,
     regions,
     name,
     totalCases,
-  })
-}
+  });
+};
 
 const reducer = (state = initialState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case GET_REGIONS:
       return {
         ...state,
         regions: action.regions,
         name: action.name,
-        totalCases: action.totalCases
-      }
+        totalCases: action.totalCases,
+      };
     default:
-      return state
+      return state;
   }
-}
+};
 
 export default reducer;

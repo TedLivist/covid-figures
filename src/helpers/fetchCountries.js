@@ -1,28 +1,7 @@
 export const fetchCountries = async (date) => {
-  const response = await fetch(`https://api.covid19tracking.narrativa.com/api/${date}`)
-  return response.json()
-}
-
-export const resolveCountries = (response, date) => {
-  const countryKeys = response.dates[date].countries
-
-  const obj = Object.entries(countryKeys)
-  const mainArr = []
-  let num = 0
-
-  obj.map(([country, value]) => {
-    for (let item of cont) {
-      if (item === country) {
-        const id = value.id
-        const confirmedCases = value.today_confirmed
-        num += value.today_confirmed
-        mainArr.push({id, country, confirmedCases})
-      }
-    }
-  })
-
-  return { mainArr, num }
-}
+  const response = await fetch(`https://api.covid19tracking.narrativa.com/api/${date}`);
+  return response.json();
+};
 
 const cont = [
   'Spain',
@@ -35,9 +14,26 @@ const cont = [
   'Portugal',
   'Switzerland',
   'Denmark',
-]
-// const newObj = {}
+];
 
+export const resolveCountries = (response, date) => {
+  const countryKeys = response.dates[date].countries;
 
-// const data = await getVirus(latestDate)
-// const mainData = breakDown(data)
+  const obj = Object.entries(countryKeys);
+  const mainArr = [];
+  let num = 0;
+
+  obj.map(([country, value]) => {
+    for (let i = 0; i <= cont.length; i += 1) {
+      if (cont[i] === country) {
+        const { id } = value;
+        const confirmedCases = value.today_confirmed;
+        num += value.today_confirmed;
+        mainArr.push({ id, country, confirmedCases });
+      }
+    }
+    return mainArr;
+  });
+
+  return { mainArr, num };
+};
