@@ -29,10 +29,17 @@ const OneCountry = (props) => {
 };
 
 OneCountry.propTypes = {
-  num: PropTypes.number.isRequired,
-  id: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  cases: PropTypes.number.isRequired,
+  num: PropTypes.number,
+  id: PropTypes.string,
+  name: PropTypes.string,
+  cases: PropTypes.number,
+};
+
+OneCountry.defaultProps = {
+  cases: 0,
+  name: '',
+  id: '',
+  num: 0,
 };
 
 export default OneCountry;

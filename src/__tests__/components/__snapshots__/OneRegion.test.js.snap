@@ -2,13 +2,17 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="one-region d-flex region-odd"
+  className="one-region d-flex region-even"
 >
-  <div />
+  <div>
+    
+  </div>
   <div
     className="d-flex"
   >
-    <div />
+    <div>
+      0
+    </div>
     <div
       className="bx-icon-2"
     >

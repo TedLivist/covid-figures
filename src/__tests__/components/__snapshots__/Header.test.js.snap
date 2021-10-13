@@ -19,11 +19,15 @@ exports[`renders correctly 1`] = `
     </a>
     <div
       className="text-white"
-    />
+    >
+      
+    </div>
   </div>
   <div
     className="text-white"
-  />
+  >
+    
+  </div>
   <div
     className="d-flex"
   >
