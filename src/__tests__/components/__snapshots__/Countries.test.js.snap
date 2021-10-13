@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Countries snapshot renders correctly 1`] = `
+<div>
+  <div
+    className="d-flex fixed-top header px-2 py-2"
+  >
+    <div
+      className="d-flex"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <box-icon
+          color="white"
+          name="chevron-left"
+          type="solid"
+        />
+      </a>
+      <div
+        className="text-white"
+      >
+        2021
+      </div>
+    </div>
+    <div
+      className="text-white"
+    >
+      countries cases
+    </div>
+    <div
+      className="d-flex"
+    >
+      <div
+        className="me-4"
+      >
+        <box-icon
+          color="white"
+          name="microphone"
+        />
+      </div>
+      <div>
+        <box-icon
+          color="white"
+          name="cog"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="jumbo d-flex"
+  >
+    <div
+      className="icon-div w-50"
+    >
+      <box-icon
+        color="#7B2C4B"
+        name="world"
+        size="8rem"
+      />
+    </div>
+    <div
+      className="w-50 jumbo-title"
+    >
+      <div>
+        Countries
+      </div>
+      <div />
+    </div>
+  </div>
+  <div
+    className="topic-input d-flex"
+  >
+    <div
+      className="topic-div"
+    >
+      <div>
+        CASES BY COUNTRY
+      </div>
+    </div>
+    <div
+      className="search-input pe-3"
+    >
+      <input
+        onChange={[Function]}
+        placeholder="Search movie"
+        type="text"
+        value=""
+      />
+    </div>
+  </div>
+  <div
+    className="countries-container"
+  />
+</div>
+`;

@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Covid Figures
 
-## Available Scripts
+> Covid Figures is a web app that displays real-time data of confirmed covid cases across selected countries. When a user navigates to a country, additional breakdown of cases for that country is displayed across its different regions
 
-In the project directory, you can run:
+![screenshot-1](./src/images/scrnsht-1.png)
+![screenshot-2](./src/images/scrnsht-2.png)
 
-### `yarn start`
+## Built With
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Getting Started
 
-### `yarn test`
+### Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### To get a local copy up and running follow these simple example steps.
 
-### `yarn build`
+- Click the green `Code` button on the repo
+- In your local PC, open your terminal in the folder you would like to clone the project.
+- Clone the repo with the command: `git clone (copied link)`; like so: `git clone https://github.com/TedLivist/covid-figures.git`
+- On the terminal, navigate into the directory like so: `cd covid-figures`
+- Checkout to branch name like so: `git checkout [branch name]`
+- Run `npm i` or `yarn` to install the dependencies
+- Run `npm start` or `yarn start` to start the application
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Author
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+👤 **Teddy-Livingstone Ememandu**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [GitHub](https://github.com/TedLivist)
+- [LinkedIn](https://linkedin.com/in/tememandu)
 
-### `yarn eject`
+## 🤝 Contributing
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Contributions, issues, and feature requests are welcome!
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Feel free to check the [issues page](../../issues/).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Show your support
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Give a ⭐️ if you like this project!
 
-## Learn More
+## Acknowledgments
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- The design for this project was inspired by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio). The design can be found [here](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
+- Inspiration

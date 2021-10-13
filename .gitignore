@@ -8,6 +8,11 @@
 # testing
 /coverage
 
+# linters
+.babelrc
+.eslintrc.json
+.stylelintrc.json
+
 # production
 /build
 

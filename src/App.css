@@ -1,38 +1,134 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ea4b89;
+}
+
+.header {
+  background-color: #ef4c8b;
+  justify-content: space-between;
+  position: sticky;
+}
+
+.jumbo {
+  justify-content: space-between;
+  background-color: #fc5193;
+  align-items: center;
+}
+
+.jumbo-title {
+  text-align: right;
+  padding: 5rem 0.9rem 5rem 0;
+}
+
+.jumbo-title div {
+  color: #fff;
+  font-weight: bold;
+}
+
+.jumbo-title div:first-child {
+  font-size: 1.5rem;
+}
+
+.jumbo-title div:nth-child(2) {
+  font-size: 1rem;
+}
+
+.icon-div {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.topic-div {
+  background-color: #df3f7e;
+  font-size: 0.75rem;
+  padding-left: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  font-family: sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+li {
+  list-style: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ul {
+  padding: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.one-region {
+  justify-content: space-between;
+  padding: 1.5rem 0.98rem;
+  color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bx-icon-2 {
+  padding-top: 0.15rem;
+  margin-left: 0.5rem;
+}
+
+.region-odd {
+  background-color: #ea4b89;
+}
+
+.region-even {
+  background-color: #cf4278;
+}
+
+.countries-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.tinted-bg {
+  background-color: #cf4479;
+}
+
+.lighter-bg {
+  background-color: #dc4782;
+}
+
+.country-div a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+.country-bx {
+  text-align: center;
+}
+
+.country-text {
+  text-align: right;
+}
+
+.country-arrow {
+  padding: 0;
+  float: right;
+}
+
+.country-sub-cases {
+  font-size: 0.8rem;
+}
+
+.country-name {
+  font-size: 1.2rem;
+}
+
+.topic-input {
+  justify-content: space-between;
+  background-color: #df3f7e;
+}
+
+.search-input input {
+  height: 1.5rem;
+  width: 8rem;
+  border: 1px solid #df3f7e;
+  border-radius: 3px;
+  padding: 0.5rem;
+}
+
+.search-input input:focus {
+  outline: 0;
 }
