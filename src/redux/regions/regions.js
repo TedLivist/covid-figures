@@ -1,5 +1,5 @@
-import { fetchRegions, resolveRegions } from "../../helpers.js/fetchRegions";
-import { formatDate } from "../../helpers.js/formatDate";
+import { fetchRegions, resolveRegions } from "../../helpers/fetchRegions";
+import { formatDate } from "../../helpers/formatDate";
 
 const GET_REGIONS = 'covidFigures/countries/GET_REGIONS';
 

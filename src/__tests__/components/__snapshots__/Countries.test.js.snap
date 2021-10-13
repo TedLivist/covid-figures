@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`Countries snapshot renders correctly 1`] = `
 <div>
   <div
     className="d-flex fixed-top header px-2 py-2"

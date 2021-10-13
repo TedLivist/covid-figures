@@ -1,4 +1,4 @@
-import { formatDate } from "../../helpers.js/formatDate";
+import { formatDate } from "../../helpers/formatDate";
 
 describe('formatDate', () => {
   test('gets the correct date', () => {
