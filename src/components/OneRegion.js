@@ -18,9 +18,15 @@ const OneRegion = (props) => {
 };
 
 OneRegion.propTypes = {
-  name: PropTypes.string.isRequired,
-  cases: PropTypes.number.isRequired,
-  num: PropTypes.number.isRequired,
+  name: PropTypes.string,
+  cases: PropTypes.number,
+  num: PropTypes.number,
+};
+
+OneRegion.defaultProps = {
+  num: 0,
+  cases: 0,
+  name: '',
 };
 
 export default OneRegion;

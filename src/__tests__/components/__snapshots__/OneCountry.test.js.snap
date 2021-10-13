@@ -5,9 +5,11 @@ exports[`renders correctly 1`] = `
   className="country-div pb-3 lighter-bg"
 >
   <a
-    aria-current={null}
-    href="/undefined"
+    aria-current="page"
+    className="active"
+    href="/"
     onClick={[Function]}
+    style={Object {}}
   >
     <span
       className="country-arrow"
@@ -23,7 +25,7 @@ exports[`renders correctly 1`] = `
     >
       <box-icon
         color="#7B2C4B"
-        name="world"
+        name="map"
         size="6rem"
       />
     </div>
@@ -32,10 +34,14 @@ exports[`renders correctly 1`] = `
     >
       <div
         className="country-name"
-      />
+      >
+        
+      </div>
       <div
         className="country-sub-cases"
-      />
+      >
+        0
+      </div>
     </div>
   </a>
 </div>

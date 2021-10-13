@@ -20,12 +20,13 @@ const Jumbo = (props) => {
 };
 
 Jumbo.propTypes = {
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   cases: PropTypes.number,
 };
 
 Jumbo.defaultProps = {
   cases: 0,
+  name: '',
 };
 
 export default Jumbo;

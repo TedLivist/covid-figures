@@ -29,11 +29,12 @@ const Header = (props) => {
 
 Header.propTypes = {
   year: PropTypes.string,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
 };
 
 Header.defaultProps = {
   year: '',
+  title: '',
 };
 
 export default Header;

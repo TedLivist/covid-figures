@@ -12,7 +12,11 @@ const Topic = (props) => {
 };
 
 Topic.propTypes = {
-  topic: PropTypes.string.isRequired,
+  topic: PropTypes.string,
+};
+
+Topic.defaultProps = {
+  topic: '',
 };
 
 export default Topic;
