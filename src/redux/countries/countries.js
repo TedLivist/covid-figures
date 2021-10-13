@@ -1,5 +1,5 @@
 import { resolveCountries, fetchCountries } from "../../helpers/fetchCountries";
-import { formatDate } from "../../helpers/formatDate";
+import formatDate from "../../helpers/formatDate";
 
 const GET_COUNTRIES = 'covidFigures/countries/GET_COUNTRIES';
 

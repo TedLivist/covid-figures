@@ -1,5 +1,5 @@
 import { resolveCountries } from "../../helpers/fetchCountries";
-import { formatDate } from '../../helpers/formatDate'
+import formatDate from '../../helpers/formatDate'
 
 describe('Resolve Countries', () => {
   let date = ''
@@ -16,7 +16,7 @@ describe('Resolve Countries', () => {
               today_confirmed: 2300,
             },
             Portugal: {
-              id: 'australia',
+              id: 'portugal',
               today_confirmed: 100
             }
           }

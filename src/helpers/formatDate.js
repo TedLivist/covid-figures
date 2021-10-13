@@ -1,4 +1,4 @@
-export const formatDate = () => {
+const formatDate = () => {
   let date = new Date()
   let toLocale = date.toLocaleDateString()
   const newArr = toLocale.split('/')
@@ -17,3 +17,4 @@ export const formatDate = () => {
   return latestDate
 }
 
+export default formatDate
