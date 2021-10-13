@@ -14,12 +14,12 @@ describe('Countries snapshot', () => {
           <BrowserRouter>
             <Countries />
           </BrowserRouter>
-        </Provider>
-        )
-      .toJSON()
-    expect(tree).toMatchSnapshot()
-  })
-})
+        </Provider>,
+      )
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
 
 describe('Countries', () => {
   test('gets data', () => {
@@ -28,10 +28,10 @@ describe('Countries', () => {
         <BrowserRouter>
           <Countries />
         </BrowserRouter>
-      </Provider>
-    )
-    
-    const getCountriesMock = jest.fn()
-    expect(getCountriesMock).toHaveBeenCalledTimes(0)
-  })
-})
+      </Provider>,
+    );
+
+    const getCountriesMock = jest.fn();
+    expect(getCountriesMock).toHaveBeenCalledTimes(0);
+  });
+});

@@ -2,9 +2,9 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import Topic from '../../components/common/Topic';
 
-it ('renders correctly', () => {
+it('renders correctly', () => {
   const tree = renderer
     .create(<Topic />)
-    .toJSON()
-  expect(tree).toMatchSnapshot()
-})
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});

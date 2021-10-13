@@ -3,19 +3,18 @@
 }
 
 body {
-  background-color: #EA4B89;
-  background-color: rgba(#EA4B89, 0, 0, 0.1)
+  background-color: #ea4b89;
 }
 
 .header {
-  background-color: #EF4C8B;
+  background-color: #ef4c8b;
   justify-content: space-between;
   position: sticky;
 }
 
 .jumbo {
   justify-content: space-between;
-  background-color: #FC5193;
+  background-color: #fc5193;
   align-items: center;
 }
 
@@ -42,7 +41,7 @@ body {
 }
 
 .topic-div {
-  background-color: #DF3F7E;
+  background-color: #df3f7e;
   font-size: 0.75rem;
   padding-left: 1.5rem;
   font-weight: 700;
@@ -70,11 +69,11 @@ ul {
 }
 
 .region-odd {
-  background-color: #EA4B89;
+  background-color: #ea4b89;
 }
 
 .region-even {
-  background-color: #CF4278;
+  background-color: #cf4278;
 }
 
 .countries-container {
@@ -83,13 +82,12 @@ ul {
 }
 
 .tinted-bg {
-  background-color: #CF4479;
+  background-color: #cf4479;
 }
 
 .lighter-bg {
-  background-color: #DC4782;
+  background-color: #dc4782;
 }
-
 
 .country-div a {
   text-decoration: none;
@@ -120,13 +118,13 @@ ul {
 
 .topic-input {
   justify-content: space-between;
-  background-color: #DF3F7E;
+  background-color: #df3f7e;
 }
 
 .search-input input {
   height: 1.5rem;
   width: 8rem;
-  border: 1px solid #DF3F7E;
+  border: 1px solid #df3f7e;
   border-radius: 3px;
   padding: 0.5rem;
 }

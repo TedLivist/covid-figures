@@ -1,12 +1,12 @@
-import { resolveCountries } from "../../helpers/fetchCountries";
-import formatDate from '../../helpers/formatDate'
+import { resolveCountries } from '../../helpers/fetchCountries';
+import formatDate from '../../helpers/formatDate';
 
 describe('Resolve Countries', () => {
-  let date = ''
-  let data = {}
+  let date = '';
+  let data = {};
 
   beforeEach(() => {
-    date = formatDate()
+    date = formatDate();
     data = {
       dates: {
         [date]: {
@@ -17,21 +17,21 @@ describe('Resolve Countries', () => {
             },
             Portugal: {
               id: 'portugal',
-              today_confirmed: 100
-            }
-          }
-        }
-      }
-    }
-  })
+              today_confirmed: 100,
+            },
+          },
+        },
+      },
+    };
+  });
 
   test('returns an array of objects', () => {
-    const resolve = resolveCountries(data, date)
-    expect(resolve.mainArr[0]).toEqual(expect.objectContaining({id: 'spain'}))
-  })
+    const resolve = resolveCountries(data, date);
+    expect(resolve.mainArr[0]).toEqual(expect.objectContaining({ id: 'spain' }));
+  });
 
   test('returns total cases', () => {
-    const resolve = resolveCountries(data, date)
-    expect(resolve.num).toBeGreaterThan(2000)
-  })
-})
+    const resolve = resolveCountries(data, date);
+    expect(resolve.num).toBeGreaterThan(2000);
+  });
+});

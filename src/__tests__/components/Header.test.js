@@ -8,8 +8,8 @@ test('renders correctly', () => {
     .create(
       <Router>
         <Header />
-      </Router>
+      </Router>,
     )
-    .toJSON()
-  expect(tree).toMatchSnapshot()
-})
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});

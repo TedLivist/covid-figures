@@ -6,10 +6,10 @@ import OneCountry from '../../components/OneCountry';
 test('renders correctly', () => {
   const tree = renderer
     .create(
-    <BrowserRouter>
-      <OneCountry />
-    </BrowserRouter>
+      <BrowserRouter>
+        <OneCountry />
+      </BrowserRouter>,
     )
-    .toJSON()
-  expect(tree).toMatchSnapshot()
-})
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});

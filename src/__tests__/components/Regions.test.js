@@ -8,11 +8,12 @@ import store from '../../redux/configureStore';
 test('renders correctly', () => {
   const tree = renderer
     .create(
-    <Provider store={store}>
-      <BrowserRouter>
-        <Regions />
-      </BrowserRouter>
-    </Provider>)
-    .toJSON()
-  expect(tree).toMatchSnapshot()
-})
+      <Provider store={store}>
+        <BrowserRouter>
+          <Regions />
+        </BrowserRouter>
+      </Provider>,
+    )
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});

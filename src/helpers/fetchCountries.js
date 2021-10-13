@@ -12,7 +12,13 @@ const cont = [
   'Netherlands',
   'Belgium',
   'Portugal',
-  'Switzerland',
+  'Brazil',
+  'Canada',
+  'Chile',
+  'China',
+  'India',
+  'Mexico',
+  'US',
   'Denmark',
 ];
 
