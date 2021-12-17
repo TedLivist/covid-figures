@@ -2,7 +2,7 @@
 
 # Covid Figures
 
-> Covid Figures is a mobile web application that displays real-time data of confirmed covid cases across selected countries. When a user navigates to a country, additional breakdown of cases for that country is displayed across its different regions
+> Covid Figures is a web application that displays real-time data of confirmed covid cases across selected countries. When a user navigates to a country, additional breakdown of cases for that country is displayed across its different regions
 
 ![screenshot-1](./src/images/scrnsht-1.png)
 ![screenshot-2](./src/images/scrnsht-2.png)
